@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>notificacion</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button (click)="guardarTareas()">
+    ObtenerDatos y Guardarlos
+  </button>
+
+
+  <!--DATOS SERVIDOR EXTERNO-->
+  <h2>Datos externos</h2>
+
+  <ion-list>
+    <button ion-item *ngFor="let dato of datos">
+        {{ dato.id_tare }}--{{ dato.n9nomb }}
+    </button>
+  </ion-list>
+  <!--DATOS SERVIDOR EXTERNO-->
+</ion-content>
